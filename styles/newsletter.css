@@ -1,0 +1,63 @@
+/* Roboto, sans-serif */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.a1-newsletter {
+  background-color: rgb(246, 249, 255);
+  padding: 40px 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.a1-newsletter p {
+  color: rgb(113, 108, 128);
+  font-size: 30px;
+}
+
+.a1-newsletter h2 {
+  color: rgb(31, 32, 42);
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.a1-newsletter input {
+  border-radius: 50px;
+  padding: 28px 20px;
+  padding-left: 30px;
+  text-align: center;
+  color: rgb(113, 108, 128);
+  font-family: "Roboto", sans-serif;
+  width: 35%;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0 5px 5px rgba(218, 221, 225, 0.8);
+}
+
+.a1-newsletter input:focus {
+  outline: none;
+  box-shadow: 0 10px 10px rgba(218, 221, 225, 0.8);
+}
+
+.a1-newsletter button {
+  padding: 15px 35px;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
+  background: linear-gradient(to right, #5146ae, #7560eb);
+  box-shadow: 0 5px 10px rgba(81, 70, 174, 0.7);
+}
+
+.a1-newsletter button:hover {
+  box-shadow: 0 7px 10px rgba(31, 29, 29, 0.4);
+}
+
+.a1-newsletter div {
+  color: #7560eb;
+  margin-top: 5px;
+}
