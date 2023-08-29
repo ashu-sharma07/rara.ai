@@ -1,0 +1,115 @@
+/* FOOTER */
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+.a2_footer-parent{
+    display: flex;
+    justify-content: center;
+    padding: 150px 200px;
+    color: #fff;
+    background: url(footer_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.a2_flex{
+    flex: 1 1 0;
+    width: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.a2_footer_bottom{
+    text-align: center;
+}
+
+.a2_footer_bottom_purple{
+    color: rgb(81, 70, 174);
+}
+
+.a2_footer__list_parent{
+        list-style-type: none;
+        padding-left: 0;
+        padding-bottom: 20px;
+}
+
+.a2_footer__list_child{
+    display: inline-block;
+}
+
+.a2_footer__list_vertical{
+    padding-bottom: 15px;
+}
+
+.a2_footer__heading{
+    margin-bottom: 30px;
+}
+
+.a2_footer__para{
+    line-height: 1.5rem;
+}
+
+.a2_footer_newsletter{
+    border: none;
+    width: 16.9vw;
+    height: 50px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.a2_footer__button{
+    border: none;
+    width: 18vw;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(to right, rgb(81, 70, 174), rgb(117, 96, 235));
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 500;
+    transition: box-shadow 0.3s;
+}
+
+.a2_footer__button:hover{
+    box-shadow: 0 7px 10px rgba(31, 29, 29, 0.4);
+}
+
+.a2_link{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    height: 28px;
+    width: 36px;
+    border-radius: 18px;
+    margin-right: 10px;
+    padding: 8px 0 0 0;
+    transform: rotateZ(-360deg);
+    transition: 0.5s;
+}
+
+.a2_link:active, .a2_link:link, .a2_link:visited{
+    color: #fff;
+}
+
+.a2_footer__list_child:nth-child(1) .a2_link{
+    background: #3b5998;
+}
+
+.a2_footer__list_child:nth-child(2) .a2_link{
+    background: #55acee;
+}
+
+.a2_footer__list_child:nth-child(3) .a2_link{
+    background: #e4405f;
+
+}
+
+.a2_footer__list_child:nth-child(4) .a2_link{
+    background: #007bb5;
+}
+
+.a2_link:hover{
+    transform: rotateZ(360deg);
+    transition: 0.5s;
+}
