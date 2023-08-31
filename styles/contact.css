@@ -1,0 +1,111 @@
+.a2_contact_us {
+  background: linear-gradient(to top, #f7fafe, #fff);
+  background-image: url("assets/bg.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.a2_contact_hero_text {
+  padding-right: 8vw;
+}
+
+.a2_contact_us_hero_text_para {
+  padding-left: 10px;
+}
+
+.a2_purple {
+  color: #5146ae;
+}
+.a2_contact_hero_text {
+  font-size: 1.2rem;
+}
+
+/* Contact Us Details */
+
+.a2_contact_us_details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.a2_contact_us_details_element {
+  width: 350px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  padding: 30px 25px;
+  box-shadow: 0 5px 5px rgba(136, 136, 136, 0.3);
+}
+
+.a2_contact_us_add_icon {
+  background: #25a6e4;
+  height: 35px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 15px;
+  margin-right: 5px;
+}
+
+.a2_contact_us_contact_icon {
+  background: #ff7c43;
+  height: 35px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 15px;
+  margin-right: 5px;
+}
+
+.a2_contact_us_mail_icon {
+  background: #5ce1b9;
+  height: 35px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 15px;
+  margin-right: 5px;
+}
+
+/* Contact US Form */
+
+.a2_contact_us_form_and_map {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  justify-content: center;
+}
+
+.a2_comment-form_subject,
+.a2_comment-form_message,
+.a2_comment-form_submit {
+  width: 100%;
+  min-width: 600px;
+}
+
+.a2_comment-form_submit {
+  background: #7560eb;
+  border: 0;
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.a2_comment-form_name,
+.a2_comment-form_email {
+  width: 48%;
+  padding-right: 4px;
+}
+
+.a2_contact_us_map {
+  padding-right: 20px;
+}
