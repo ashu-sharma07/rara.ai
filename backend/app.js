@@ -1,11 +1,13 @@
 import dotenv from "dotenv";
 import express from "express";
 import axios from "axios";
+import cors from "cors";
 import mongoose from "mongoose";
 
 const app = express();
 dotenv.config();
 app.use(express.json());
+app.use(cors());
 
 // Connect Mongno
 const connectDB = async () => {

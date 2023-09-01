@@ -69,45 +69,119 @@
 
       <div class="a2_contact_us_form_and_map">
         <div class="a2_contact_us_form">
-          <form
-            action="#"
-            method="POST"
-            id="commentform"
-            class="a2_comment-form"
-          >
+          <div id="toolform" class="a2_comment-form">
+            <h3>Budget Predictor</h3>
+            <p>Answer the following questions :</p>
+
+            <label for="gender">What is your Gender ? </label>
+            <select name="gender" id="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <br />
+            <br />
+            <label for="age">What is your Age > </label>
             <input
-              type="text"
-              name="name"
-              class="a2_comment-form_name"
-              placeholder="Name*"
-            />
-            <input
-              type="email"
-              name="email"
+              type="number"
+              name="age"
+              id="age"
               class="a2_comment-form_email"
-              placeholder="Email*"
+              placeholder="Age"
             />
             <br /><br />
+
+            <label for="studyYear">What is you Study Year : </label>
             <input
-              type="text"
-              name="subject"
-              class="a2_comment-form_subject"
-              placeholder="Subject*"
+              type="number"
+              name="studyYear"
+              class="a2_comment-form_email"
+              id="studyYear"
+              placeholder="Study Year"
+              min="1"
+              max="5"
             />
             <br /><br />
-            <textarea
-              name="text"
-              id="role"
-              cols="30"
-              rows="10"
-              class="a2_comment-form_message"
-              placeholder="Message*"
-            ></textarea>
-            <br /><br />
-            <button type="submit" class="a2_comment-form_submit">
-              <span>Submit Now</span>
+
+            <label for="living">Where do you Live? : </label>
+            <select name="living" id="living">
+              <option value="Home">Home</option>
+              <option value="Hostel">Hostel</option>
+            </select>
+            <br />
+            <br />
+
+            <!-- {
+            "gender": "Male",
+            "age": "19",
+            "studyYear": "1",
+            "living": "Home",
+            "scholarship": "No",
+            "jobs": "Yes",
+            "transporting": "Motorcycle",
+            "smoking": "No",
+            "drinks": "No",
+            "hobbies": "No",
+            "cosmetics": "No",
+            "sub": "No"
+        } -->
+
+            <label for="transporting"
+              >Do you have any Transportation ? :
+            </label>
+            <select name="transporting" id="transporting">
+              <option value="No">No</option>
+              <option value="Car">Car</option>
+              <option value="Motorcycle">Motorcycle</option>
+            </select>
+            <br />
+            <br />
+
+            <label for="smoking">Do you Smoke ? : </label>
+            <select name="smoking" id="smoking">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            <br />
+            <br />
+
+            <label for="drinks">Do you Drink ? </label>
+            <select name="drinks" id="drinks">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            <br />
+            <br />
+
+            <label for="hobbies">Do you have Hobbies ? </label>
+            <select name="hobbies" id="hobbies">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            <br />
+            <br />
+
+            <label for="cosmetics">Do you use Cosmetics ? </label>
+            <select name="cosmetics" id="cosmetics">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            <br />
+            <br />
+
+            <label for="sub"
+              >Do you own Subscribtions (prime, netflix, etc) ?
+            </label>
+            <select name="sub" id="sub">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            <br />
+            <br />
+
+            <button class="a2_comment-form_submit" id="tool-submit-btn">
+              Predict Budget
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </section>
@@ -193,6 +267,8 @@
     <!-- Footer Section END HERE -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/tool.js"></script>
     <script src="./scripts/newsletter.js"></script>
     <script src="./scripts/testimonial.js"></script>
     <script
