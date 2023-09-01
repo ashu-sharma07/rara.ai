@@ -12,12 +12,9 @@ subscribeBtn.addEventListener("click", async function () {
       messageElement.textContent = "";
     }, 1500);
   } else {
-    const response = await postData(
-      "https://api.formswala.com/api/v1/newsletter/new/subscriber",
-      {
-        email,
-      }
-    );
+    const response = await postData("https://rara.cnarmy.in/api/newsletter", {
+      email,
+    });
     messageElement.textContent = response.message;
     setTimeout(() => {
       messageElement.textContent = "";
