@@ -1,10 +1,43 @@
 import dotenv from "dotenv";
 import express from "express";
 import axios from "axios";
+import mongoose from "mongoose";
 
 const app = express();
 dotenv.config();
 app.use(express.json());
+
+// Connect Mongno
+const connectDB = async () => {
+  mongoose.connect(process.env.MONGO_URI).then((conn) => {
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  });
+};
+
+await connectDB();
+
+// Newsletter
+const newsletterSubscriberSchema = new mongoose.Schema(
+  {
+    subscriber: {
+      type: String,
+      required: [true, "Please enter your email"],
+      lowercase: true,
+      trim: true,
+    },
+
+    isSubscribed: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  { timestamps: true }
+);
+
+const NewsletterSubscriber = mongoose.model(
+  "NewsletterSubscriber",
+  newsletterSubscriberSchema
+);
 
 app.get("/api/hello", (req, res) => {
   res.json({
@@ -12,10 +45,43 @@ app.get("/api/hello", (req, res) => {
   });
 });
 
-app.post("/api/newsletter", (req, res) => {
-  res.json({
-    message: "Newsletter",
+app.post("/api/newsletter", async (req, res) => {
+  const { email } = req.body;
+
+  const isValidEmail = (email) => {
+    const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return regEx.test(email);
+  };
+
+  if (!email || !isValidEmail(email)) {
+    res.status(400).json({
+      success: false,
+      message: "Please enter a valid  email",
+    });
+    return;
+  }
+
+  const newsletterSubscriber = await NewsletterSubscriber.findOne({
+    subscriber: email,
   });
+
+  if (newsletterSubscriber) {
+    res.status(400).json({
+      success: false,
+      message: "Email already exists",
+    });
+    return;
+  }
+
+  await NewsletterSubscriber.create({
+    subscriber: email,
+  });
+
+  res.status(200).json({
+    success: true,
+    message: "Newsletter subscription successful",
+  });
+  return;
 });
 
 app.post("/api/prediction", async (req, res) => {
@@ -47,19 +113,6 @@ app.post("/api/prediction", async (req, res) => {
 
   res.json({
     message: predictedBudget,
-  });
-});
-
-app.post("/api/contact", (req, res) => {
-  res.json({
-    message: "Prediction",
-  });
-});
-
-app.use((req, res) => {
-  res.status(404).json({
-    message:
-      "Ohh you are lost, read the API documentation to find your way back home :)",
   });
 });
 
