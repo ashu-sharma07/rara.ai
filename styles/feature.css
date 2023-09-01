@@ -1,14 +1,12 @@
-
-
-.r1container{
+.r1container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
+  padding: 20px 0;
 }
 
-.r1card1{
+.r1card1 {
   z-index: 2;
   width: 250px;
   height: 300px;
@@ -21,66 +19,57 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-  
-  border-radius: .5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+
+  border-radius: 0.5rem;
   /* flex:1 1 30rem; */
-  
+
   position: relative;
 }
-.c{
+.c {
   z-index: -2;
   position: absolute;
-  top:-160%; 
-  left:-165%;
+  top: -160%;
+  left: -165%;
   height: 400px;
   width: 400px;
-  border-radius:60px;
+  border-radius: 60px;
   text-align: center;
-  background:rgba(59, 6, 105, 0.874);
-  padding:2rem;
+  background: rgba(59, 6, 105, 0.874);
+  padding: 2rem;
   padding-top: 5rem;
-  transition: 0.5s all ease ;
+  transition: 0.5s all ease;
 }
-.r1card1:hover .c{
+.r1card1:hover .c {
   background-color: black;
   transition: 0.5s;
-  top:-50%;
-  left:-70%;
-
-  
-  
+  top: -50%;
+  left: -70%;
 }
-.r1card1 h1{
+.r1card1 h1 {
   font-size: 1rem;
 }
-.r1image{
+.r1image {
   margin-top: 2rem;
   margin-bottom: -1rem;
-  
 }
-.r1card1:hover{
-  color:rgb(255, 255, 255);
+.r1card1:hover {
+  color: rgb(255, 255, 255);
 }
-.r1details hr{
-  color:rgb(53, 53, 53);
-  
+.r1details hr {
+  color: rgb(53, 53, 53);
 }
 
-
-
-.r1name{
+.r1name {
   text-align: center;
   padding-top: 50px;
   color: rgb(129, 61, 239);
   font-size: 0.5rem;
   text-transform: uppercase;
-  text-shadow:  0.3rem 0.5 rem rgb(228, 53, 53);
+  text-shadow: 0.3rem 0.5 rem rgb(228, 53, 53);
 }
 
-
-
-.r1details{
+.r1details {
   text-align: center;
   align-items: center;
   /* padding-top: 50px; */
@@ -89,39 +78,37 @@
   height: 5rem;
 }
 
-
-.r1details p{
-
+.r1details p {
   font-size: 13px;
   font-family: inherit;
 }
 
-.r1container .r1card1 button{
+.r1container .r1card1 button {
   color: white;
-  
+
   background-color: rgba(121, 62, 224, 0.636);
   border: 0px solid black;
   border-radius: 15px;
   display: inline;
   position: relative;
   font-weight: 700;
-  width:100px;
+  width: 100px;
   height: 2rem;
   font-size: 0.75rem;
   margin-bottom: 20px;
 }
 
-.r1container .r1card1 button:hover{
+.r1container .r1card1 button:hover {
   color: black;
   background-color: white;
   transition: 0.2s;
   cursor: pointer;
 }
-.r1feature{
+.r1feature {
   text-align: center;
 }
 
- @keyframes animate {
+@keyframes animate {
   0% {
     left: 0;
     transform: translate(-50%);
@@ -130,15 +117,13 @@
     left: 100%;
     transform: translate(90%);
   }
-  100%{
-    left:0;
+  100% {
+    left: 0;
     transform: translate(-50%);
   }
 }
 
-
-
-.r2card1{
+.r2card1 {
   width: 250px;
   height: auto;
   background-color: rgb(255, 255, 255);
@@ -147,79 +132,76 @@
   border-radius: 5px;
   margin: 40px;
   display: inline-block;
-  align-items:center;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  align-items: center;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   /* border: 1px solid black; */
 }
 
-.r2card1:hover{
+.r2card1:hover {
   box-shadow: 2px 2px 10px black;
   transition: 0.2s;
   background-color: rgb(0, 0, 0);
-  color:rgb(255, 255, 255);
-  transform:scale(1.1);
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
 }
-.r2details hr{
-  color:rgb(53, 53, 53);
+.r2details hr {
+  color: rgb(53, 53, 53);
 }
 
-.r2special{
+.r2special {
   display: none;
   position: relative;
-  top:20px;
+  top: 20px;
   color: black;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height:30px;
-  width:100%;
+  height: 30px;
+  width: 100%;
   background-color: rgb(255, 255, 255);
   box-shadow: 2px 2px 10px rgba(213, 213, 213, 0.63);
 }
 
-.r2card1:hover .r2special{
+.r2card1:hover .r2special {
   display: flex;
-  
 }
 
-.r2name{
+.r2name {
   text-align: center;
   padding-top: 50px;
   color: rgb(129, 61, 239);
   font-size: 0.5rem;
   text-transform: uppercase;
-  text-shadow:  0.3rem 0.5 rem rgb(228, 53, 53);
+  text-shadow: 0.3rem 0.5 rem rgb(228, 53, 53);
 }
 
-
-.r2details{
+.r2details {
   text-align: center;
   padding-top: 50px;
-  
 }
 
-.r2details h2{
+.r2details h2 {
   font-size: 30px;
   display: inline;
 }
 
-.r2details h5{
+.r2details h5 {
   position: relative;
   display: inline;
   top: -4px;
 }
-.r2details h3{
+.r2details h3 {
   position: relative;
   display: inline;
   top: -15px;
   font-size: 25px;
 }
 
-.r2details ul{
+.r2details ul {
   font-size: 13px;
 }
 
-.r1container .r2card1 button{
+.r1container .r2card1 button {
   color: white;
   margin-top: 30px;
   margin-bottom: 50px;
@@ -231,23 +213,21 @@
   position: relative;
   left: 75px;
   font-weight: bold;
-  width:100px;
+  width: 100px;
   height: 30px;
   font-size: 11px;
-  
 }
 
-.r1container .r2card1 button:hover{
+.r1container .r2card1 button:hover {
   color: black;
   background-color: white;
   transition: 0.2s;
   cursor: pointer;
 }
 
-.r1container .r2card1 .r2details ul{
+.r1container .r2card1 .r2details ul {
   position: relative;
   left: -10px;
   list-style-type: none;
   font-size: 12px;
-
 }

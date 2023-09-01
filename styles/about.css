@@ -95,6 +95,7 @@ body {
   margin-top: 70px;
   display: flex;
   flex-direction: row;
+  padding: 0 0 40px 0;
 }
 
 .vid {
