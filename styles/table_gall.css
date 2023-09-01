@@ -1,0 +1,14 @@
+.a2_table{
+    margin: 40px 30px;
+}
+
+.a2_image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in;
+  }
+.a2_image:hover {
+    transform: scale(1.2);
+  }
