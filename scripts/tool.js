@@ -17,7 +17,7 @@ submitBtn.addEventListener("click", async () => {
   const sub = document.getElementById("sub").value;
   console.log(`${gender} ${age} ${studyYear} ${living} ${transporting}`);
   console.log(`${smoking} ${drinks} ${hobbies} ${cosmetics} ${sub}`);
-  const response = await postData("http://localhost:5005/api/prediction", {
+  const response = await postData("https://rara.cnarmy.in/api/prediction", {
     gender,
     age,
     studyYear,
@@ -33,7 +33,7 @@ submitBtn.addEventListener("click", async () => {
   });
   const predictionElement = document.getElementById("prediction-result");
   predictionElement.style.visibility = "visible";
-  predictionElement.innerHTML = ` <h4>Your Predicted Monthly Budget is ${response.message.prediction}</h4>`;
+  predictionElement.innerHTML = ` <h4>Your Predicted Monthly Budget is ₹ ${response.message.prediction}</h4>`;
   console.log(response.message);
 });
 
